@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 70%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #333;
+  background-color: #aaa8ff;
+}
+
+main {
+  display: flex;
+  position: relative;
+  width: 100rem;
+  height: 50rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.player {
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem;
+  transition: all 0.6s;
+}
+
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.score {
+  font-size: 7rem;
+  font-weight: 300;
+  color: #22206f;
+  margin-bottom: 6rem;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.player--active .name {
+  font-weight: bold;
+}
+.player--active .score {
+  font-weight: bold;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #3676ba;
+  color: #fff;
+  border-radius: 10px;
+  opacity: 0.4;
+  transition: all 0.7s;
+}
+
+.current-label {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3rem;
+}
+
+/* btn */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  border: none;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.4s;
+  padding: 0.5rem 2rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 35rem;
+}
+.btn--hold {
+  top: 42rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
